@@ -1,0 +1,12 @@
+# Generated tables and local reruns are intentionally not published.
+/data/
+/runs/
+/.venv/
+/.bootstrap/
+/.uv-python/
+/.uv-cache/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*

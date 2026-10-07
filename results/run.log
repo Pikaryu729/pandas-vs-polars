@@ -1,0 +1,493 @@
+== start 2026-10-07 01:54:26 CDT  load: { 5.74 6.65 5.63 }
+ALL SAME
+  1M pandas                       read_csv                 median=  0.5172s cores=  1.0 bg= 4.5  -> background too high, redoing batch
+     waited     9s for a quiet machine before pandas read_csv (bg 1.9 cores)
+  1M pandas                       read_csv                 median=  0.5107s cores=  1.0 bg= 5.5  -> background too high, redoing batch
+     waited    16s for a quiet machine before pandas read_csv (bg 1.4 cores)
+  1M pandas                       read_csv                 median=  0.4744s cores=  1.0 bg= 1.2
+  1M pandas                       read_parquet             median=  0.0078s cores=  9.5 bg= 0.0
+  1M pandas                       filter                   median=  0.0142s cores=  1.0 bg= 0.0
+  1M pandas                       groupby_low              median=  0.0225s cores=  1.0 bg= 0.0
+  1M pandas                       groupby_high             median=  0.0122s cores=  1.0 bg= 0.2
+  1M pandas                       join                     median=  0.0202s cores=  1.0 bg= 0.1
+  1M pandas                       sort                     median=  0.1498s cores=  1.0 bg= 1.4
+  1M pandas                       window                   median=  0.0095s cores=  1.0 bg= 0.0
+  1M pandas                       pipeline_parquet         median=  0.0295s cores=  3.2 bg= 0.0
+     waited    23s for a quiet machine before pandas pipeline_csv (bg 2.2 cores)
+  1M pandas                       pipeline_csv             median=  0.5049s cores=  1.0 bg= 2.0
+  1M pandas                       read_csv_arrow           median=  0.0168s cores= 12.3 bg= 0.0
+     waited     9s for a quiet machine before pandas pipeline_parquet_tuned (bg 1.8 cores)
+  1M pandas                       pipeline_parquet_tuned   median=  0.0183s cores=  2.2 bg= 0.0
+  1M pandas                       pipeline_csv_tuned       median=  0.0338s cores=  6.2 bg= 0.0
+     waited     9s for a quiet machine before polars-eager read_csv (bg 1.8 cores)
+  1M polars-eager                 read_csv                 median=  0.0411s cores= 11.3 bg= 0.0
+     waited     9s for a quiet machine before polars-eager read_parquet (bg 2.2 cores)
+  1M polars-eager                 read_parquet             median=  0.0069s cores=  6.6 bg= 0.0
+  1M polars-eager                 filter                   median=  0.0018s cores= 10.3 bg= 0.0
+  1M polars-eager                 groupby_low              median=  0.0086s cores=  9.0 bg= 0.0
+     waited     9s for a quiet machine before polars-eager groupby_high (bg 1.4 cores)
+  1M polars-eager                 groupby_high             median=  0.0067s cores=  9.7 bg= 0.0
+  1M polars-eager                 join                     median=  0.0049s cores= 10.7 bg= 0.0
+  1M polars-eager                 sort                     median=  0.0155s cores= 10.4 bg= 0.0
+     waited     9s for a quiet machine before polars-eager window (bg 1.2 cores)
+  1M polars-eager                 window                   median=  0.0325s cores=  6.8 bg= 0.0
+     waited     9s for a quiet machine before polars-eager pipeline_parquet (bg 1.2 cores)
+  1M polars-eager                 pipeline_parquet         median=  0.0125s cores=  7.5 bg= 0.1
+  1M polars-eager                 pipeline_csv             median=  0.0467s cores= 11.7 bg= 0.1
+     waited     9s for a quiet machine before polars-lazy read_csv (bg 1.8 cores)
+  1M polars-lazy                  read_csv                 median=  0.0394s cores= 11.1 bg= 0.0
+     waited     9s for a quiet machine before polars-lazy read_parquet (bg 2.2 cores)
+  1M polars-lazy                  read_parquet             median=  0.0071s cores=  6.4 bg= 0.0
+  1M polars-lazy                  filter                   median=  0.0015s cores= 10.2 bg= 0.0
+  1M polars-lazy                  groupby_low              median=  0.0026s cores=  8.1 bg= 0.0
+  1M polars-lazy                  groupby_high             median=  0.0032s cores= 10.7 bg= 0.0
+  1M polars-lazy                  join                     median=  0.0046s cores=  9.3 bg= 0.0
+  1M polars-lazy                  sort                     median=  0.0246s cores= 14.1 bg= 0.2
+     waited     9s for a quiet machine before polars-lazy window (bg 1.6 cores)
+  1M polars-lazy                  window                   median=  0.0087s cores= 11.8 bg= 0.0
+  1M polars-lazy                  pipeline_parquet         median=  0.0092s cores=  3.6 bg= 0.0
+  1M polars-lazy                  pipeline_csv             median=  0.0428s cores= 11.3 bg= 0.0
+     waited     9s for a quiet machine before polars-lazy-inmem read_csv (bg 1.4 cores)
+  1M polars-lazy-inmem            read_csv                 median=  0.0415s cores= 11.3 bg= 0.1
+     waited     9s for a quiet machine before polars-lazy-inmem read_parquet (bg 1.3 cores)
+  1M polars-lazy-inmem            read_parquet             median=  0.0070s cores=  6.1 bg= 0.1
+  1M polars-lazy-inmem            filter                   median=  0.0023s cores=  8.5 bg= 0.0
+  1M polars-lazy-inmem            groupby_low              median=  0.0076s cores=  8.5 bg= 0.0
+  1M polars-lazy-inmem            groupby_high             median=  0.0064s cores=  2.9 bg= 1.1
+     waited     9s for a quiet machine before polars-lazy-inmem join (bg 2.0 cores)
+  1M polars-lazy-inmem            join                     median=  0.0054s cores= 13.1 bg= 1.6
+     waited    16s for a quiet machine before polars-lazy-inmem sort (bg 2.0 cores)
+  1M polars-lazy-inmem            sort                     median=  0.0166s cores= 10.5 bg= 0.0
+     waited     9s for a quiet machine before polars-lazy-inmem window (bg 2.2 cores)
+  1M polars-lazy-inmem            window                   median=  0.0354s cores=  6.3 bg= 0.1
+     waited    93s for a quiet machine before polars-lazy-inmem pipeline_parquet (bg 1.9 cores)
+  1M polars-lazy-inmem            pipeline_parquet         median=  0.0068s cores=  7.0 bg= 0.2
+  1M polars-lazy-inmem            pipeline_csv             median=  0.0469s cores= 11.3 bg= 0.2
+== timings 1M done 02:00:41  load: { 13.10 7.58 6.07 }
+ 10M pandas                       read_csv                 median=  4.7885s cores=  1.0 bg= 1.2
+ 10M pandas                       read_parquet             median=  0.0559s cores= 12.8 bg= 0.0
+     waited     9s for a quiet machine before pandas filter (bg 1.9 cores)
+ 10M pandas                       filter                   median=  0.1320s cores=  1.0 bg= 1.8
+ 10M pandas                       groupby_low              median=  0.2049s cores=  1.0 bg= 0.9
+ 10M pandas                       groupby_high             median=  0.1825s cores=  1.0 bg= 1.8
+ 10M pandas                       join                     median=  0.2950s cores=  1.0 bg= 1.8
+     redo sort run 5: other processes used 4.7 cores
+     waited     9s for a quiet machine before pandas sort redo (bg 1.6 cores)
+ 10M pandas                       sort                     median=  3.7447s cores=  1.0 bg= 1.6
+     waited    23s for a quiet machine before pandas window (bg 1.9 cores)
+ 10M pandas                       window                   median=  0.1805s cores=  1.0 bg= 2.7
+ 10M pandas                       pipeline_parquet         median=  0.2621s cores=  3.6 bg= 3.9  -> background too high, redoing batch
+ 10M pandas                       pipeline_parquet         median=  0.2487s cores=  3.8 bg= 1.8
+     redo pipeline_csv run 5: other processes used 5.8 cores
+ 10M pandas                       pipeline_csv             median=  5.1899s cores=  1.0 bg= 1.5
+ 10M pandas                       read_csv_arrow           median=  0.1589s cores= 14.2 bg= 4.8  -> background too high, redoing batch
+ 10M pandas                       read_csv_arrow           median=  0.1608s cores= 14.2 bg= 6.8  -> background too high, redoing batch
+ 10M pandas                       read_csv_arrow           median=  0.1603s cores= 13.9 bg=11.0
+ 10M pandas                       pipeline_parquet_tuned   median=  0.1178s cores=  2.7 bg= 4.5
+     waited     9s for a quiet machine before pandas pipeline_csv_tuned (bg 1.5 cores)
+ 10M pandas                       pipeline_csv_tuned       median=  0.3017s cores=  7.4 bg= 3.0
+ 10M polars-eager                 read_csv                 median=  0.4869s cores= 10.3 bg= 4.5  -> background too high, redoing batch
+ 10M polars-eager                 read_csv                 median=  0.4823s cores= 11.5 bg= 0.8
+ 10M polars-eager                 read_parquet             median=  0.0339s cores= 15.0 bg= 0.4
+ 10M polars-eager                 filter                   median=  0.0096s cores= 15.5 bg= 0.0
+ 10M polars-eager                 groupby_low              median=  0.1026s cores=  9.1 bg= 0.3
+     waited     9s for a quiet machine before polars-eager groupby_high (bg 1.6 cores)
+ 10M polars-eager                 groupby_high             median=  0.0970s cores= 10.8 bg= 0.1
+     waited     9s for a quiet machine before polars-eager join (bg 1.3 cores)
+ 10M polars-eager                 join                     median=  0.2758s cores=  5.1 bg= 2.7
+ 10M polars-eager                 sort                     median=  0.2046s cores= 11.5 bg= 2.7
+ 10M polars-eager                 window                   median=  0.4385s cores=  6.7 bg= 1.7
+ 10M polars-eager                 pipeline_parquet         median=  0.0837s cores= 11.7 bg= 0.2
+     waited     9s for a quiet machine before polars-eager pipeline_csv (bg 2.1 cores)
+ 10M polars-eager                 pipeline_csv             median=  0.5708s cores= 10.4 bg= 1.4
+ 10M polars-lazy                  read_csv                 median=  0.5129s cores= 10.3 bg= 2.7
+ 10M polars-lazy                  read_parquet             median=  0.0350s cores= 13.5 bg= 0.6
+     waited     9s for a quiet machine before polars-lazy filter (bg 1.7 cores)
+ 10M polars-lazy                  filter                   median=  0.0096s cores= 14.9 bg= 0.0
+     waited     9s for a quiet machine before polars-lazy groupby_low (bg 1.9 cores)
+ 10M polars-lazy                  groupby_low              median=  0.0125s cores=  9.8 bg= 0.0
+ 10M polars-lazy                  groupby_high             median=  0.0331s cores= 14.2 bg= 0.4
+     waited     9s for a quiet machine before polars-lazy join (bg 1.8 cores)
+ 10M polars-lazy                  join                     median=  0.0609s cores= 14.7 bg= 0.4
+     waited     9s for a quiet machine before polars-lazy sort (bg 2.0 cores)
+ 10M polars-lazy                  sort                     median=  0.2171s cores= 15.1 bg= 4.1  -> background too high, redoing batch
+ 10M polars-lazy                  sort                     median=  0.2182s cores= 15.7 bg= 5.7  -> background too high, redoing batch
+     waited     9s for a quiet machine before polars-lazy sort (bg 1.9 cores)
+ 10M polars-lazy                  sort                     median=  0.2136s cores= 15.9 bg= 1.0
+     waited     9s for a quiet machine before polars-lazy window (bg 1.8 cores)
+ 10M polars-lazy                  window                   median=  0.0820s cores= 13.9 bg= 0.7
+     waited    23s for a quiet machine before polars-lazy pipeline_parquet (bg 1.9 cores)
+ 10M polars-lazy                  pipeline_parquet         median=  0.0227s cores= 10.6 bg= 0.5
+ 10M polars-lazy                  pipeline_csv             median=  0.6057s cores=  8.8 bg= 2.2
+ 10M polars-lazy-inmem            read_csv                 median=  0.4977s cores= 10.1 bg= 2.4
+ 10M polars-lazy-inmem            read_parquet             median=  0.0356s cores= 13.7 bg= 0.0
+     waited     9s for a quiet machine before polars-lazy-inmem filter (bg 2.0 cores)
+ 10M polars-lazy-inmem            filter                   median=  0.0104s cores= 15.2 bg= 0.0
+ 10M polars-lazy-inmem            groupby_low              median=  0.0954s cores=  9.3 bg= 0.0
+     waited    16s for a quiet machine before polars-lazy-inmem groupby_high (bg 1.8 cores)
+ 10M polars-lazy-inmem            groupby_high             median=  0.0741s cores= 12.5 bg= 0.2
+     waited     9s for a quiet machine before polars-lazy-inmem join (bg 1.8 cores)
+ 10M polars-lazy-inmem            join                     median=  0.2826s cores=  5.1 bg= 1.8
+ 10M polars-lazy-inmem            sort                     median=  0.2024s cores= 11.5 bg= 4.3  -> background too high, redoing batch
+ 10M polars-lazy-inmem            sort                     median=  0.2024s cores= 11.8 bg= 5.7  -> background too high, redoing batch
+     waited     9s for a quiet machine before polars-lazy-inmem sort (bg 1.7 cores)
+ 10M polars-lazy-inmem            sort                     median=  0.2040s cores= 11.6 bg= 4.3
+ 10M polars-lazy-inmem            window                   median=  0.4281s cores=  6.9 bg= 2.2
+ 10M polars-lazy-inmem            pipeline_parquet         median=  0.0390s cores= 10.6 bg= 0.5
+     waited     9s for a quiet machine before polars-lazy-inmem pipeline_csv (bg 1.8 cores)
+ 10M polars-lazy-inmem            pipeline_csv             median=  0.6091s cores=  9.9 bg= 2.5
+== timings 10M done 02:08:41  load: { 3.70 5.14 5.48 }
+ 50M pandas                       read_csv                 median= 43.3101s cores=  1.0 bg= 1.5
+     waited   107s for a quiet machine before pandas read_parquet (bg 2.3 cores)
+ 50M pandas                       read_parquet             median=  0.3817s cores= 10.1 bg= 2.7
+ 50M pandas                       filter                   median=  0.7243s cores=  1.0 bg= 1.6
+ 50M pandas                       groupby_low              median=  1.1125s cores=  1.0 bg= 1.3
+ 50M pandas                       groupby_high             median=  2.1488s cores=  1.0 bg= 1.4
+     redo join run 2: other processes used 3.7 cores
+     waited     9s for a quiet machine before pandas join redo (bg 1.8 cores)
+     redo join run 3: other processes used 3.2 cores
+ 50M pandas                       join                     median=  3.9027s cores=  0.9 bg= 1.8
+ 50M pandas                       sort                     median= 33.1034s cores=  1.0 bg= 1.4
+ 50M pandas                       window                   median=  1.8218s cores=  1.0 bg= 1.3
+ 50M pandas                       pipeline_parquet         median=  1.6891s cores=  3.2 bg= 1.7
+ 50M pandas                       pipeline_csv             median= 45.5328s cores=  1.0 bg= 1.5
+ 50M pandas                       read_csv_arrow           median=  0.9757s cores= 12.4 bg= 0.8
+ 50M pandas                       pipeline_parquet_tuned   median=  0.7578s cores=  2.4 bg= 0.8
+ 50M pandas                       pipeline_csv_tuned       median=  1.8959s cores=  6.7 bg= 1.1
+ 50M polars-eager                 read_csv                 median=  2.9456s cores=  9.6 bg= 1.0
+ 50M polars-eager                 read_parquet             median=  0.1734s cores= 16.0 bg= 4.2
+ 50M polars-eager                 filter                   median=  0.0404s cores= 15.7 bg= 0.0
+     waited     9s for a quiet machine before polars-eager groupby_low (bg 1.2 cores)
+ 50M polars-eager                 groupby_low              median=  0.4570s cores= 11.8 bg= 8.0  -> background too high, redoing batch
+ 50M polars-eager                 groupby_low              median=  0.4648s cores= 11.5 bg= 5.6  -> background too high, redoing batch
+ 50M polars-eager                 groupby_low              median=  0.4553s cores= 11.7 bg= 3.2
+ 50M polars-eager                 groupby_high             median=  0.6632s cores= 11.7 bg= 2.7
+ 50M polars-eager                 join                     median=  1.8835s cores=  5.4 bg= 0.8
+ 50M polars-eager                 sort                     median=  1.0405s cores= 12.0 bg= 1.4
+ 50M polars-eager                 window                   median=  2.4645s cores=  8.0 bg= 1.3
+ 50M polars-eager                 pipeline_parquet         median=  0.4308s cores= 13.4 bg= 0.9
+ 50M polars-eager                 pipeline_csv             median=  3.5901s cores=  9.6 bg= 2.1
+     redo read_csv run 2: other processes used 3.6 cores
+     waited    16s for a quiet machine before polars-lazy read_csv redo (bg 2.3 cores)
+ 50M polars-lazy                  read_csv                 median=  2.6325s cores=  9.7 bg= 1.4
+ 50M polars-lazy                  read_parquet             median=  0.1588s cores= 16.4 bg= 7.4
+ 50M polars-lazy                  filter                   median=  0.0392s cores= 16.1 bg= 0.6
+ 50M polars-lazy                  groupby_low              median=  0.0405s cores= 16.5 bg= 0.3
+     waited    16s for a quiet machine before polars-lazy groupby_high (bg 1.3 cores)
+ 50M polars-lazy                  groupby_high             median=  0.2574s cores= 15.9 bg= 1.2
+ 50M polars-lazy                  join                     median=  0.3710s cores= 16.3 bg=11.1  -> background too high, redoing batch
+ 50M polars-lazy                  join                     median=  0.3737s cores= 16.1 bg= 7.5  -> background too high, redoing batch
+ 50M polars-lazy                  join                     median=  0.3724s cores= 15.9 bg= 4.2
+     redo sort run 0: other processes used 3.3 cores
+     waited     9s for a quiet machine before polars-lazy sort redo (bg 1.4 cores)
+ 50M polars-lazy                  sort                     median=  1.5341s cores= 15.4 bg= 1.1
+     waited    16s for a quiet machine before polars-lazy window (bg 1.2 cores)
+ 50M polars-lazy                  window                   median=  0.4495s cores= 13.8 bg= 1.0
+ 50M polars-lazy                  pipeline_parquet         median=  0.1003s cores= 15.4 bg= 0.2
+     waited     9s for a quiet machine before polars-lazy pipeline_csv (bg 2.0 cores)
+ 50M polars-lazy                  pipeline_csv             median=  3.4303s cores=  7.5 bg= 1.7
+ 50M polars-lazy-inmem            read_csv                 median=  2.7381s cores=  9.6 bg= 1.0
+ 50M polars-lazy-inmem            read_parquet             median=  0.1800s cores= 14.4 bg=12.0  -> background too high, redoing batch
+     waited    37s for a quiet machine before polars-lazy-inmem read_parquet (bg 2.0 cores)
+ 50M polars-lazy-inmem            read_parquet             median=  0.1576s cores= 15.1 bg= 8.3
+     waited     9s for a quiet machine before polars-lazy-inmem filter (bg 1.3 cores)
+ 50M polars-lazy-inmem            filter                   median=  0.0385s cores= 15.8 bg= 0.4
+ 50M polars-lazy-inmem            groupby_low              median=  0.4048s cores= 12.1 bg= 3.3  -> background too high, redoing batch
+ 50M polars-lazy-inmem            groupby_low              median=  0.4445s cores= 11.6 bg= 2.5
+ 50M polars-lazy-inmem            groupby_high             median=  0.4984s cores= 13.1 bg= 1.4
+     waited     9s for a quiet machine before polars-lazy-inmem join (bg 1.5 cores)
+ 50M polars-lazy-inmem            join                     median=  1.8627s cores=  5.2 bg= 1.6
+     redo sort run 3: other processes used 4.0 cores
+     waited     9s for a quiet machine before polars-lazy-inmem sort redo (bg 1.5 cores)
+ 50M polars-lazy-inmem            sort                     median=  1.0322s cores= 12.6 bg= 1.7
+     waited    86s for a quiet machine before polars-lazy-inmem window (bg 1.1 cores)
+ 50M polars-lazy-inmem            window                   median=  2.4119s cores=  8.1 bg= 0.7
+ 50M polars-lazy-inmem            pipeline_parquet         median=  0.1986s cores= 12.6 bg= 0.6
+     waited     9s for a quiet machine before polars-lazy-inmem pipeline_csv (bg 1.2 cores)
+     redo pipeline_csv run 3: other processes used 3.1 cores
+ 50M polars-lazy-inmem            pipeline_csv             median=  3.2120s cores=  8.0 bg= 1.3
+== timings 50M done 02:34:01  load: { 11.95 10.23 7.50 }
+ 10M polars-eager       1-thread  read_csv                 median=  4.0590s cores=  1.0 bg= 0.8
+ 10M polars-eager       1-thread  read_parquet             median=  0.3785s cores=  1.1 bg= 1.3
+ 10M polars-eager       1-thread  filter                   median=  0.0652s cores=  1.0 bg= 0.0
+ 10M polars-eager       1-thread  groupby_low              median=  0.3139s cores=  1.0 bg= 2.1
+ 10M polars-eager       1-thread  groupby_high             median=  0.4462s cores=  1.0 bg= 1.1
+ 10M polars-eager       1-thread  join                     median=  0.8805s cores=  1.0 bg= 0.8
+ 10M polars-eager       1-thread  sort                     median=  1.3346s cores=  1.0 bg= 0.8
+ 10M polars-eager       1-thread  window                   median=  0.9811s cores=  1.0 bg= 0.7
+     waited     9s for a quiet machine before polars-eager pipeline_parquet (bg 1.2 cores)
+ 10M polars-eager       1-thread  pipeline_parquet         median=  0.6055s cores=  1.0 bg= 1.1
+     waited    86s for a quiet machine before polars-eager pipeline_csv (bg 1.2 cores)
+ 10M polars-eager       1-thread  pipeline_csv             median=  4.3507s cores=  1.0 bg= 0.8
+ 10M polars-lazy        1-thread  read_csv                 median=  4.0438s cores=  1.0 bg= 1.1
+ 10M polars-lazy        1-thread  read_parquet             median=  0.3790s cores=  1.1 bg= 0.7
+ 10M polars-lazy        1-thread  filter                   median=  0.0657s cores=  1.0 bg= 0.5
+ 10M polars-lazy        1-thread  groupby_low              median=  0.0705s cores=  1.0 bg= 0.0
+ 10M polars-lazy        1-thread  groupby_high             median=  0.2140s cores=  1.0 bg= 0.8
+ 10M polars-lazy        1-thread  join                     median=  0.3612s cores=  1.0 bg= 0.7
+ 10M polars-lazy        1-thread  sort                     median=  1.5984s cores=  1.0 bg= 0.8
+ 10M polars-lazy        1-thread  window                   median=  0.5159s cores=  1.0 bg= 0.9
+ 10M polars-lazy        1-thread  pipeline_parquet         median=  0.1766s cores=  1.0 bg= 1.4
+ 10M polars-lazy        1-thread  pipeline_csv             median=  3.9947s cores=  1.0 bg= 0.8
+== thread scaling done 02:38:44  load: { 3.50 7.45 7.06 }
+ 10M pandas             read_csv                 rep0 peak+   2583.7 MB (maxrss+   2583.7) result=  1009.3 MB samples=3214
+ 10M pandas             read_csv                 rep1 peak+   2583.7 MB (maxrss+   2583.7) result=  1009.3 MB samples=3208
+ 10M pandas             read_csv                 rep2 peak+   2584.6 MB (maxrss+   2584.6) result=  1009.3 MB samples=3222
+ 10M pandas             read_parquet             rep0 peak+   1898.5 MB (maxrss+   1898.1) result=  1009.3 MB samples=67
+ 10M pandas             read_parquet             rep1 peak+   1907.4 MB (maxrss+   1906.9) result=  1009.3 MB samples=65
+ 10M pandas             read_parquet             rep2 peak+   1887.4 MB (maxrss+   1886.9) result=  1009.3 MB samples=64
+ 10M pandas             filter                   rep0 peak+    260.9 MB (maxrss+    260.9) result=   108.9 MB samples=96
+ 10M pandas             filter                   rep1 peak+    260.3 MB (maxrss+    260.3) result=   108.9 MB samples=94
+ 10M pandas             filter                   rep2 peak+    263.7 MB (maxrss+    263.7) result=   108.9 MB samples=95
+ 10M pandas             groupby_low              rep0 peak+    514.2 MB (maxrss+    514.2) result=     0.1 MB samples=156
+ 10M pandas             groupby_low              rep1 peak+    517.0 MB (maxrss+    517.0) result=     0.1 MB samples=154
+ 10M pandas             groupby_low              rep2 peak+    514.2 MB (maxrss+    514.2) result=     0.1 MB samples=154
+ 10M pandas             groupby_high             rep0 peak+    230.6 MB (maxrss+    230.6) result=    32.0 MB samples=133
+ 10M pandas             groupby_high             rep1 peak+    230.7 MB (maxrss+    230.7) result=    32.0 MB samples=134
+ 10M pandas             groupby_high             rep2 peak+    230.5 MB (maxrss+    230.5) result=    32.0 MB samples=129
+ 10M pandas             join                     rep0 peak+   1446.3 MB (maxrss+   1446.3) result=  1679.8 MB samples=457
+ 10M pandas             join                     rep1 peak+   1447.7 MB (maxrss+   1447.7) result=  1679.8 MB samples=450
+ 10M pandas             join                     rep2 peak+   1449.7 MB (maxrss+   1449.7) result=  1679.8 MB samples=449
+ 10M pandas             sort                     rep0 peak+   1855.0 MB (maxrss+   1855.0) result=  1093.1 MB samples=2795
+ 10M pandas             sort                     rep1 peak+   1854.5 MB (maxrss+   1854.5) result=  1093.1 MB samples=2505
+ 10M pandas             sort                     rep2 peak+   1855.3 MB (maxrss+   1855.3) result=  1093.1 MB samples=2384
+ 10M pandas             window                   rep0 peak+    369.7 MB (maxrss+    369.7) result=  1169.3 MB samples=114
+ 10M pandas             window                   rep1 peak+    369.7 MB (maxrss+    369.7) result=  1169.3 MB samples=115
+ 10M pandas             window                   rep2 peak+    369.7 MB (maxrss+    369.7) result=  1169.3 MB samples=115
+ 10M pandas             pipeline_parquet         rep0 peak+   2413.4 MB (maxrss+   2413.4) result=     0.0 MB samples=190
+ 10M pandas             pipeline_parquet         rep1 peak+   2420.0 MB (maxrss+   2420.0) result=     0.0 MB samples=192
+ 10M pandas             pipeline_parquet         rep2 peak+   2431.1 MB (maxrss+   2431.1) result=     0.0 MB samples=190
+ 10M pandas             pipeline_csv             rep0 peak+   2879.6 MB (maxrss+   2879.6) result=     0.0 MB samples=3551
+ 10M pandas             pipeline_csv             rep1 peak+   2874.3 MB (maxrss+   2874.3) result=     0.0 MB samples=3462
+ 10M pandas             pipeline_csv             rep2 peak+   2879.5 MB (maxrss+   2879.6) result=     0.0 MB samples=3533
+ 10M pandas             read_csv_arrow           rep0 peak+   2803.1 MB (maxrss+   2802.9) result=  1009.3 MB samples=98
+ 10M pandas             read_csv_arrow           rep1 peak+   2804.1 MB (maxrss+   2804.0) result=  1009.3 MB samples=93
+ 10M pandas             read_csv_arrow           rep2 peak+   2810.7 MB (maxrss+   2810.6) result=  1009.3 MB samples=113
+ 10M pandas             pipeline_parquet_tuned   rep0 peak+    588.2 MB (maxrss+    588.2) result=     0.0 MB samples=91
+ 10M pandas             pipeline_parquet_tuned   rep1 peak+    585.5 MB (maxrss+    585.5) result=     0.0 MB samples=91
+ 10M pandas             pipeline_parquet_tuned   rep2 peak+    576.7 MB (maxrss+    576.7) result=     0.0 MB samples=92
+ 10M pandas             pipeline_csv_tuned       rep0 peak+   2730.5 MB (maxrss+   2730.5) result=     0.0 MB samples=185
+ 10M pandas             pipeline_csv_tuned       rep1 peak+   2732.5 MB (maxrss+   2732.5) result=     0.0 MB samples=184
+ 10M pandas             pipeline_csv_tuned       rep2 peak+   2728.3 MB (maxrss+   2728.3) result=     0.0 MB samples=186
+ 10M polars-eager       read_csv                 rep0 peak+   2042.8 MB (maxrss+   2054.9) result=   770.6 MB samples=272
+ 10M polars-eager       read_csv                 rep1 peak+   2061.9 MB (maxrss+   2066.9) result=   770.6 MB samples=299
+ 10M polars-eager       read_csv                 rep2 peak+   2038.5 MB (maxrss+   2049.6) result=   770.6 MB samples=272
+ 10M polars-eager       read_parquet             rep0 peak+   1274.4 MB (maxrss+   1274.4) result=   770.6 MB samples=34
+ 10M polars-eager       read_parquet             rep1 peak+   1274.1 MB (maxrss+   1274.0) result=   770.6 MB samples=37
+ 10M polars-eager       read_parquet             rep2 peak+   1275.1 MB (maxrss+   1275.0) result=   770.6 MB samples=31
+ 10M polars-eager       filter                   rep0 peak+    116.4 MB (maxrss+    116.4) result=    76.8 MB samples=6
+ 10M polars-eager       filter                   rep1 peak+    120.6 MB (maxrss+    120.6) result=    76.8 MB samples=3
+ 10M polars-eager       filter                   rep2 peak+    119.9 MB (maxrss+    119.9) result=    76.8 MB samples=6
+ 10M polars-eager       groupby_low              rep0 peak+   1829.2 MB (maxrss+   1829.3) result=     0.0 MB samples=51
+ 10M polars-eager       groupby_low              rep1 peak+   1828.8 MB (maxrss+   1828.8) result=     0.0 MB samples=47
+ 10M polars-eager       groupby_low              rep2 peak+   1828.0 MB (maxrss+   1828.1) result=     0.0 MB samples=45
+ 10M polars-eager       groupby_high             rep0 peak+   1415.1 MB (maxrss+   1415.2) result=    28.0 MB samples=47
+ 10M polars-eager       groupby_high             rep1 peak+   1407.2 MB (maxrss+   1407.2) result=    28.0 MB samples=47
+ 10M polars-eager       groupby_high             rep2 peak+   1412.3 MB (maxrss+   1412.5) result=    28.0 MB samples=46
+ 10M polars-eager       join                     rep0 peak+   1597.0 MB (maxrss+   1597.3) result=   918.5 MB samples=154
+ 10M polars-eager       join                     rep1 peak+   1582.5 MB (maxrss+   1583.1) result=   918.5 MB samples=165
+ 10M polars-eager       join                     rep2 peak+   1596.7 MB (maxrss+   1596.7) result=   918.5 MB samples=165
+ 10M polars-eager       sort                     rep0 peak+   2129.8 MB (maxrss+   2129.9) result=   770.6 MB samples=109
+ 10M polars-eager       sort                     rep1 peak+   2129.3 MB (maxrss+   2129.6) result=   770.6 MB samples=97
+ 10M polars-eager       sort                     rep2 peak+   2126.1 MB (maxrss+   2129.4) result=   770.6 MB samples=107
+ 10M polars-eager       window                   rep0 peak+    828.9 MB (maxrss+    828.9) result=   930.6 MB samples=241
+ 10M polars-eager       window                   rep1 peak+    833.7 MB (maxrss+    833.7) result=   930.6 MB samples=225
+ 10M polars-eager       window                   rep2 peak+    822.5 MB (maxrss+    822.6) result=   930.6 MB samples=224
+ 10M polars-eager       pipeline_parquet         rep0 peak+   1998.9 MB (maxrss+   1998.9) result=     0.0 MB samples=50
+ 10M polars-eager       pipeline_parquet         rep1 peak+   2000.8 MB (maxrss+   2000.9) result=     0.0 MB samples=44
+ 10M polars-eager       pipeline_parquet         rep2 peak+   1982.1 MB (maxrss+   1982.1) result=     0.0 MB samples=49
+ 10M polars-eager       pipeline_csv             rep0 peak+   2046.7 MB (maxrss+   2054.0) result=     0.0 MB samples=310
+ 10M polars-eager       pipeline_csv             rep1 peak+   2064.8 MB (maxrss+   2066.5) result=     0.0 MB samples=321
+ 10M polars-eager       pipeline_csv             rep2 peak+   2070.8 MB (maxrss+   2071.8) result=     0.0 MB samples=338
+ 10M polars-lazy        read_csv                 rep0 peak+   2050.3 MB (maxrss+   2063.9) result=   770.6 MB samples=304
+ 10M polars-lazy        read_csv                 rep1 peak+   2045.2 MB (maxrss+   2048.3) result=   770.6 MB samples=303
+ 10M polars-lazy        read_csv                 rep2 peak+   2088.0 MB (maxrss+   2093.3) result=   770.6 MB samples=290
+ 10M polars-lazy        read_parquet             rep0 peak+   1274.1 MB (maxrss+   1274.0) result=   770.6 MB samples=32
+ 10M polars-lazy        read_parquet             rep1 peak+   1274.6 MB (maxrss+   1274.5) result=   770.6 MB samples=33
+ 10M polars-lazy        read_parquet             rep2 peak+   1273.7 MB (maxrss+   1273.7) result=   770.6 MB samples=35
+ 10M polars-lazy        filter                   rep0 peak+    111.3 MB (maxrss+    111.3) result=    76.8 MB samples=5
+ 10M polars-lazy        filter                   rep1 peak+    111.8 MB (maxrss+    111.8) result=    76.8 MB samples=5
+ 10M polars-lazy        filter                   rep2 peak+    111.3 MB (maxrss+    111.3) result=    76.8 MB samples=6
+ 10M polars-lazy        groupby_low              rep0 peak+    141.9 MB (maxrss+    141.9) result=     0.0 MB samples=5
+ 10M polars-lazy        groupby_low              rep1 peak+    142.4 MB (maxrss+    142.4) result=     0.0 MB samples=7
+ 10M polars-lazy        groupby_low              rep2 peak+    140.4 MB (maxrss+    140.4) result=     0.0 MB samples=6
+ 10M polars-lazy        groupby_high             rep0 peak+    417.4 MB (maxrss+    425.1) result=    28.0 MB samples=17
+ 10M polars-lazy        groupby_high             rep1 peak+    420.2 MB (maxrss+    429.0) result=    28.0 MB samples=16
+ 10M polars-lazy        groupby_high             rep2 peak+    420.5 MB (maxrss+    422.5) result=    28.0 MB samples=17
+ 10M polars-lazy        join                     rep0 peak+   1706.9 MB (maxrss+   1711.2) result=   918.5 MB samples=31
+ 10M polars-lazy        join                     rep1 peak+   1699.3 MB (maxrss+   1700.9) result=   918.5 MB samples=32
+ 10M polars-lazy        join                     rep2 peak+   1691.8 MB (maxrss+   1698.1) result=   918.5 MB samples=32
+ 10M polars-lazy        sort                     rep0 peak+   2733.2 MB (maxrss+   2733.6) result=   770.6 MB samples=137
+ 10M polars-lazy        sort                     rep1 peak+   2721.8 MB (maxrss+   2729.0) result=   770.6 MB samples=125
+ 10M polars-lazy        sort                     rep2 peak+   2796.0 MB (maxrss+   2798.7) result=   770.6 MB samples=135
+ 10M polars-lazy        window                   rep0 peak+    828.5 MB (maxrss+    832.3) result=   930.6 MB samples=50
+ 10M polars-lazy        window                   rep1 peak+    843.5 MB (maxrss+    843.5) result=   930.6 MB samples=44
+ 10M polars-lazy        window                   rep2 peak+    806.1 MB (maxrss+    808.6) result=   930.6 MB samples=48
+ 10M polars-lazy        pipeline_parquet         rep0 peak+    378.4 MB (maxrss+    378.4) result=     0.0 MB samples=13
+ 10M polars-lazy        pipeline_parquet         rep1 peak+    378.5 MB (maxrss+    378.5) result=     0.0 MB samples=14
+ 10M polars-lazy        pipeline_parquet         rep2 peak+    382.5 MB (maxrss+    382.5) result=     0.0 MB samples=14
+ 10M polars-lazy        pipeline_csv             rep0 peak+   1395.1 MB (maxrss+   1395.4) result=     0.0 MB samples=399
+ 10M polars-lazy        pipeline_csv             rep1 peak+   1391.7 MB (maxrss+   1393.0) result=     0.0 MB samples=362
+ 10M polars-lazy        pipeline_csv             rep2 peak+   1419.2 MB (maxrss+   1420.3) result=     0.0 MB samples=362
+ 10M polars-lazy-inmem  read_csv                 rep0 peak+   2079.8 MB (maxrss+   2087.7) result=   770.6 MB samples=276
+ 10M polars-lazy-inmem  read_csv                 rep1 peak+   2069.8 MB (maxrss+   2077.2) result=   770.6 MB samples=269
+ 10M polars-lazy-inmem  read_csv                 rep2 peak+   2062.5 MB (maxrss+   2073.1) result=   770.6 MB samples=277
+ 10M polars-lazy-inmem  read_parquet             rep0 peak+   1274.5 MB (maxrss+   1274.5) result=   770.6 MB samples=36
+ 10M polars-lazy-inmem  read_parquet             rep1 peak+   1274.2 MB (maxrss+   1274.2) result=   770.6 MB samples=32
+ 10M polars-lazy-inmem  read_parquet             rep2 peak+   1274.1 MB (maxrss+   1274.1) result=   770.6 MB samples=28
+ 10M polars-lazy-inmem  filter                   rep0 peak+    119.9 MB (maxrss+    119.9) result=    76.8 MB samples=7
+ 10M polars-lazy-inmem  filter                   rep1 peak+    118.9 MB (maxrss+    118.9) result=    76.8 MB samples=8
+ 10M polars-lazy-inmem  filter                   rep2 peak+    122.9 MB (maxrss+    122.8) result=    76.8 MB samples=7
+ 10M polars-lazy-inmem  groupby_low              rep0 peak+   1235.9 MB (maxrss+   1235.9) result=     0.0 MB samples=48
+ 10M polars-lazy-inmem  groupby_low              rep1 peak+   1235.0 MB (maxrss+   1235.0) result=     0.0 MB samples=43
+ 10M polars-lazy-inmem  groupby_low              rep2 peak+   1228.0 MB (maxrss+   1228.0) result=     0.0 MB samples=41
+ 10M polars-lazy-inmem  groupby_high             rep0 peak+    543.4 MB (maxrss+    543.5) result=    28.0 MB samples=35
+ 10M polars-lazy-inmem  groupby_high             rep1 peak+    538.6 MB (maxrss+    539.1) result=    28.0 MB samples=34
+ 10M polars-lazy-inmem  groupby_high             rep2 peak+    536.2 MB (maxrss+    536.9) result=    28.0 MB samples=37
+ 10M polars-lazy-inmem  join                     rep0 peak+   1596.9 MB (maxrss+   1598.4) result=   918.5 MB samples=171
+ 10M polars-lazy-inmem  join                     rep1 peak+   1608.5 MB (maxrss+   1609.4) result=   918.5 MB samples=162
+ 10M polars-lazy-inmem  join                     rep2 peak+   1598.7 MB (maxrss+   1599.9) result=   918.5 MB samples=156
+ 10M polars-lazy-inmem  sort                     rep0 peak+   2129.7 MB (maxrss+   2130.3) result=   770.6 MB samples=87
+ 10M polars-lazy-inmem  sort                     rep1 peak+   2127.7 MB (maxrss+   2129.5) result=   770.6 MB samples=87
+ 10M polars-lazy-inmem  sort                     rep2 peak+   2127.3 MB (maxrss+   2130.1) result=   770.6 MB samples=105
+ 10M polars-lazy-inmem  window                   rep0 peak+    827.6 MB (maxrss+    827.7) result=   930.6 MB samples=227
+ 10M polars-lazy-inmem  window                   rep1 peak+    826.1 MB (maxrss+    826.1) result=   930.6 MB samples=237
+ 10M polars-lazy-inmem  window                   rep2 peak+    835.4 MB (maxrss+    835.5) result=   930.6 MB samples=224
+ 10M polars-lazy-inmem  pipeline_parquet         rep0 peak+    568.6 MB (maxrss+    568.7) result=     0.0 MB samples=23
+ 10M polars-lazy-inmem  pipeline_parquet         rep1 peak+    564.3 MB (maxrss+    564.3) result=     0.0 MB samples=22
+ 10M polars-lazy-inmem  pipeline_parquet         rep2 peak+    566.6 MB (maxrss+    566.7) result=     0.0 MB samples=20
+ 10M polars-lazy-inmem  pipeline_csv             rep0 peak+   1422.2 MB (maxrss+   1422.6) result=     0.0 MB samples=385
+ 10M polars-lazy-inmem  pipeline_csv             rep1 peak+   1438.2 MB (maxrss+   1443.6) result=     0.0 MB samples=383
+ 10M polars-lazy-inmem  pipeline_csv             rep2 peak+   1417.0 MB (maxrss+   1419.6) result=     0.0 MB samples=385
+== memory 10M done 02:40:17  load: { 5.85 6.94 6.88 }
+ 50M pandas             read_csv                 rep0 peak+  20647.3 MB (maxrss+  20647.3) result=  5046.5 MB samples=29214
+ 50M pandas             read_csv                 rep1 peak+  20649.1 MB (maxrss+  20649.1) result=  5046.5 MB samples=46377
+ 50M pandas             read_csv                 rep2 peak+  20648.7 MB (maxrss+  20648.7) result=  5046.5 MB samples=35227
+ 50M pandas             read_parquet             rep0 peak+   9011.9 MB (maxrss+   9011.5) result=  5046.5 MB samples=302
+ 50M pandas             read_parquet             rep1 peak+   9010.3 MB (maxrss+   9009.8) result=  5046.5 MB samples=263
+ 50M pandas             read_parquet             rep2 peak+   9017.4 MB (maxrss+   9016.9) result=  5046.5 MB samples=310
+ 50M pandas             filter                   rep0 peak+   1597.9 MB (maxrss+   1597.9) result=   545.0 MB samples=660
+ 50M pandas             filter                   rep1 peak+   1923.4 MB (maxrss+   1923.4) result=   545.0 MB samples=669
+ 50M pandas             filter                   rep2 peak+   1595.2 MB (maxrss+   1595.2) result=   545.0 MB samples=641
+ 50M pandas             groupby_low              rep0 peak+   2582.3 MB (maxrss+   2582.3) result=     0.1 MB samples=1046
+ 50M pandas             groupby_low              rep1 peak+   2592.2 MB (maxrss+   2592.2) result=     0.1 MB samples=1048
+ 50M pandas             groupby_low              rep2 peak+   2592.5 MB (maxrss+   2592.5) result=     0.1 MB samples=1065
+ 50M pandas             groupby_high             rep0 peak+   1107.4 MB (maxrss+   1107.4) result=   160.0 MB samples=2007
+ 50M pandas             groupby_high             rep1 peak+   1107.4 MB (maxrss+   1107.4) result=   160.0 MB samples=1938
+ 50M pandas             groupby_high             rep2 peak+   1107.2 MB (maxrss+   1107.2) result=   160.0 MB samples=2139
+ 50M pandas             join                     rep0 peak+   6237.3 MB (maxrss+   6237.3) result=  8399.1 MB samples=5575
+ 50M pandas             join                     rep1 peak+   6238.6 MB (maxrss+   6238.6) result=  8399.1 MB samples=4897
+ 50M pandas             join                     rep2 peak+   6286.6 MB (maxrss+   6286.6) result=  8399.1 MB samples=4745
+ 50M pandas             sort                     rep0 peak+   9015.9 MB (maxrss+   9015.9) result=  5465.3 MB samples=26609
+ 50M pandas             sort                     rep1 peak+   9017.9 MB (maxrss+   9017.9) result=  5465.3 MB samples=28639
+ 50M pandas             sort                     rep2 peak+   9020.9 MB (maxrss+   9020.9) result=  5465.3 MB samples=26126
+ 50M pandas             window                   rep0 peak+   1840.1 MB (maxrss+   1840.1) result=  5846.5 MB samples=1489
+ 50M pandas             window                   rep1 peak+   1839.8 MB (maxrss+   1839.8) result=  5846.5 MB samples=1494
+ 50M pandas             window                   rep2 peak+   1840.0 MB (maxrss+   1840.0) result=  5846.5 MB samples=1489
+ 50M pandas             pipeline_parquet         rep0 peak+  11738.8 MB (maxrss+  11738.8) result=     0.0 MB samples=1301
+ 50M pandas             pipeline_parquet         rep1 peak+  11729.7 MB (maxrss+  11729.7) result=     0.0 MB samples=1458
+ 50M pandas             pipeline_parquet         rep2 peak+  11719.6 MB (maxrss+  11719.6) result=     0.0 MB samples=1341
+ 50M pandas             pipeline_csv             rep0 peak+  20648.2 MB (maxrss+  20648.2) result=     0.0 MB samples=32284
+ 50M pandas             pipeline_csv             rep1 peak+  20647.7 MB (maxrss+  20647.7) result=     0.0 MB samples=34851
+ 50M pandas             pipeline_csv             rep2 peak+  20651.1 MB (maxrss+  20651.1) result=     0.0 MB samples=42117
+ 50M pandas             read_csv_arrow           rep0 peak+  13633.3 MB (maxrss+  13633.1) result=  5046.5 MB samples=812
+ 50M pandas             read_csv_arrow           rep1 peak+  13627.3 MB (maxrss+  13627.1) result=  5046.5 MB samples=814
+ 50M pandas             read_csv_arrow           rep2 peak+  13614.9 MB (maxrss+  13614.8) result=  5046.5 MB samples=872
+ 50M pandas             pipeline_parquet_tuned   rep0 peak+   2365.0 MB (maxrss+   2364.9) result=     0.0 MB samples=719
+ 50M pandas             pipeline_parquet_tuned   rep1 peak+   2343.3 MB (maxrss+   2343.3) result=     0.0 MB samples=680
+ 50M pandas             pipeline_parquet_tuned   rep2 peak+   2369.1 MB (maxrss+   2369.1) result=     0.0 MB samples=695
+ 50M pandas             pipeline_csv_tuned       rep0 peak+  13929.9 MB (maxrss+  13929.9) result=     0.0 MB samples=1767
+ 50M pandas             pipeline_csv_tuned       rep1 peak+  13935.4 MB (maxrss+  13935.4) result=     0.0 MB samples=1672
+ 50M pandas             pipeline_csv_tuned       rep2 peak+  13874.6 MB (maxrss+  13874.6) result=     0.0 MB samples=1888
+ 50M polars-eager       read_csv                 rep0 peak+   9940.2 MB (maxrss+   9949.2) result=  3852.8 MB samples=2110
+ 50M polars-eager       read_csv                 rep1 peak+   9985.9 MB (maxrss+   9991.7) result=  3852.8 MB samples=2280
+ 50M polars-eager       read_csv                 rep2 peak+   9967.5 MB (maxrss+   9969.8) result=  3852.8 MB samples=2199
+ 50M polars-eager       read_parquet             rep0 peak+   6042.6 MB (maxrss+   6042.6) result=  3852.8 MB samples=264
+ 50M polars-eager       read_parquet             rep1 peak+   5981.3 MB (maxrss+   5982.3) result=  3852.8 MB samples=200
+ 50M polars-eager       read_parquet             rep2 peak+   6003.6 MB (maxrss+   6003.5) result=  3852.8 MB samples=244
+ 50M polars-eager       filter                   rep0 peak+    390.4 MB (maxrss+    390.3) result=   384.3 MB samples=43
+ 50M polars-eager       filter                   rep1 peak+    416.3 MB (maxrss+    416.3) result=   384.3 MB samples=26
+ 50M polars-eager       filter                   rep2 peak+    422.7 MB (maxrss+    422.7) result=   384.3 MB samples=29
+ 50M polars-eager       groupby_low              rep0 peak+   8868.2 MB (maxrss+   8880.3) result=     0.0 MB samples=418
+ 50M polars-eager       groupby_low              rep1 peak+   8853.5 MB (maxrss+   8853.5) result=     0.0 MB samples=450
+ 50M polars-eager       groupby_low              rep2 peak+   8746.6 MB (maxrss+   8772.5) result=     0.0 MB samples=452
+ 50M polars-eager       groupby_high             rep0 peak+   6613.8 MB (maxrss+   6613.9) result=   140.0 MB samples=582
+ 50M polars-eager       groupby_high             rep1 peak+   6567.8 MB (maxrss+   6567.9) result=   140.0 MB samples=605
+ 50M polars-eager       groupby_high             rep2 peak+   6584.1 MB (maxrss+   6584.5) result=   140.0 MB samples=579
+ 50M polars-eager       join                     rep0 peak+   7834.8 MB (maxrss+   7835.0) result=  4592.9 MB samples=1873
+ 50M polars-eager       join                     rep1 peak+   7619.5 MB (maxrss+   7620.1) result=  4592.9 MB samples=1967
+ 50M polars-eager       join                     rep2 peak+   7882.3 MB (maxrss+   7882.5) result=  4592.9 MB samples=1381
+ 50M polars-eager       sort                     rep0 peak+  10614.2 MB (maxrss+  10614.6) result=  3852.8 MB samples=996
+ 50M polars-eager       sort                     rep1 peak+  10608.7 MB (maxrss+  10609.1) result=  3852.8 MB samples=994
+ 50M polars-eager       sort                     rep2 peak+  10614.7 MB (maxrss+  10614.9) result=  3852.8 MB samples=1048
+ 50M polars-eager       window                   rep0 peak+   3785.1 MB (maxrss+   3785.1) result=  4652.8 MB samples=2144
+ 50M polars-eager       window                   rep1 peak+   3987.3 MB (maxrss+   3987.3) result=  4652.8 MB samples=1995
+ 50M polars-eager       window                   rep2 peak+   3995.6 MB (maxrss+   3995.6) result=  4652.8 MB samples=2218
+ 50M polars-eager       pipeline_parquet         rep0 peak+   9292.8 MB (maxrss+   9292.9) result=     0.0 MB samples=404
+ 50M polars-eager       pipeline_parquet         rep1 peak+   9333.3 MB (maxrss+   9333.8) result=     0.0 MB samples=396
+ 50M polars-eager       pipeline_parquet         rep2 peak+   9333.6 MB (maxrss+   9333.6) result=     0.0 MB samples=349
+ 50M polars-eager       pipeline_csv             rep0 peak+  10121.1 MB (maxrss+  10121.2) result=     0.0 MB samples=2793
+ 50M polars-eager       pipeline_csv             rep1 peak+  10128.0 MB (maxrss+  10128.0) result=     0.0 MB samples=2758
+ 50M polars-eager       pipeline_csv             rep2 peak+  10073.4 MB (maxrss+  10073.4) result=     0.0 MB samples=2372
+ 50M polars-lazy        read_csv                 rep0 peak+   9978.3 MB (maxrss+   9982.9) result=  3852.8 MB samples=2192
+ 50M polars-lazy        read_csv                 rep1 peak+   9968.9 MB (maxrss+   9970.7) result=  3852.8 MB samples=2129
+ 50M polars-lazy        read_csv                 rep2 peak+   9999.7 MB (maxrss+  10003.6) result=  3852.8 MB samples=1998
+ 50M polars-lazy        read_parquet             rep0 peak+   6010.2 MB (maxrss+   6010.2) result=  3852.8 MB samples=213
+ 50M polars-lazy        read_parquet             rep1 peak+   6014.9 MB (maxrss+   6014.9) result=  3852.8 MB samples=183
+ 50M polars-lazy        read_parquet             rep2 peak+   6018.2 MB (maxrss+   6018.1) result=  3852.8 MB samples=206
+ 50M polars-lazy        filter                   rep0 peak+    566.9 MB (maxrss+    566.9) result=   384.3 MB samples=31
+ 50M polars-lazy        filter                   rep1 peak+    561.0 MB (maxrss+    561.0) result=   384.3 MB samples=30
+ 50M polars-lazy        filter                   rep2 peak+    562.4 MB (maxrss+    562.4) result=   384.3 MB samples=27
+ 50M polars-lazy        groupby_low              rep0 peak+    128.3 MB (maxrss+    128.3) result=     0.0 MB samples=27
+ 50M polars-lazy        groupby_low              rep1 peak+    139.9 MB (maxrss+    139.9) result=     0.0 MB samples=24
+ 50M polars-lazy        groupby_low              rep2 peak+    142.1 MB (maxrss+    142.1) result=     0.0 MB samples=22
+ 50M polars-lazy        groupby_high             rep0 peak+   2037.1 MB (maxrss+   2039.8) result=   140.0 MB samples=179
+ 50M polars-lazy        groupby_high             rep1 peak+   2028.0 MB (maxrss+   2037.5) result=   140.0 MB samples=177
+ 50M polars-lazy        groupby_high             rep2 peak+   2014.9 MB (maxrss+   2017.5) result=   140.0 MB samples=171
+ 50M polars-lazy        join                     rep0 peak+   7757.0 MB (maxrss+   7759.7) result=  4592.9 MB samples=255
+ 50M polars-lazy        join                     rep1 peak+   7748.8 MB (maxrss+   7753.8) result=  4592.9 MB samples=297
+ 50M polars-lazy        join                     rep2 peak+   7745.1 MB (maxrss+   7751.6) result=  4592.9 MB samples=313
+ 50M polars-lazy        sort                     rep0 peak+  12165.7 MB (maxrss+  12182.4) result=  3852.8 MB samples=1345
+ 50M polars-lazy        sort                     rep1 peak+  12318.0 MB (maxrss+  12332.0) result=  3852.8 MB samples=1276
+ 50M polars-lazy        sort                     rep2 peak+  12187.4 MB (maxrss+  12195.6) result=  3852.8 MB samples=1220
+ 50M polars-lazy        window                   rep0 peak+   3672.6 MB (maxrss+   3672.6) result=  4652.8 MB samples=397
+ 50M polars-lazy        window                   rep1 peak+   3792.9 MB (maxrss+   3793.2) result=  4652.8 MB samples=403
+ 50M polars-lazy        window                   rep2 peak+   3661.7 MB (maxrss+   3661.7) result=  4652.8 MB samples=424
+ 50M polars-lazy        pipeline_parquet         rep0 peak+   1237.0 MB (maxrss+   1237.1) result=     0.0 MB samples=80
+ 50M polars-lazy        pipeline_parquet         rep1 peak+   1213.9 MB (maxrss+   1214.0) result=     0.0 MB samples=58
+ 50M polars-lazy        pipeline_parquet         rep2 peak+   1205.7 MB (maxrss+   1205.8) result=     0.0 MB samples=44
+ 50M polars-lazy        pipeline_csv             rep0 peak+   4830.0 MB (maxrss+   4831.7) result=     0.0 MB samples=2273
+ 50M polars-lazy        pipeline_csv             rep1 peak+   4907.5 MB (maxrss+   4912.8) result=     0.0 MB samples=2329
+ 50M polars-lazy        pipeline_csv             rep2 peak+   4870.4 MB (maxrss+   4870.5) result=     0.0 MB samples=2261
+ 50M polars-lazy-inmem  read_csv                 rep0 peak+   9963.4 MB (maxrss+   9973.2) result=  3852.8 MB samples=2040
+ 50M polars-lazy-inmem  read_csv                 rep1 peak+   9982.3 MB (maxrss+   9987.5) result=  3852.8 MB samples=2138
+ 50M polars-lazy-inmem  read_csv                 rep2 peak+  10019.0 MB (maxrss+  10021.5) result=  3852.8 MB samples=2187
+ 50M polars-lazy-inmem  read_parquet             rep0 peak+   5972.0 MB (maxrss+   5972.0) result=  3852.8 MB samples=190
+ 50M polars-lazy-inmem  read_parquet             rep1 peak+   6049.6 MB (maxrss+   6049.5) result=  3852.8 MB samples=196
+ 50M polars-lazy-inmem  read_parquet             rep2 peak+   6019.1 MB (maxrss+   6019.0) result=  3852.8 MB samples=182
+ 50M polars-lazy-inmem  filter                   rep0 peak+    481.8 MB (maxrss+    481.7) result=   384.3 MB samples=30
+ 50M polars-lazy-inmem  filter                   rep1 peak+    404.7 MB (maxrss+    404.7) result=   384.3 MB samples=25
+ 50M polars-lazy-inmem  filter                   rep2 peak+    455.5 MB (maxrss+    455.5) result=   384.3 MB samples=36
+ 50M polars-lazy-inmem  groupby_low              rep0 peak+   6137.5 MB (maxrss+   6159.7) result=     0.0 MB samples=393
+ 50M polars-lazy-inmem  groupby_low              rep1 peak+   5940.5 MB (maxrss+   5979.1) result=     0.0 MB samples=376
+ 50M polars-lazy-inmem  groupby_low              rep2 peak+   5911.5 MB (maxrss+   5941.9) result=     0.0 MB samples=327
+ 50M polars-lazy-inmem  groupby_high             rep0 peak+   2206.1 MB (maxrss+   2206.5) result=   140.0 MB samples=454
+ 50M polars-lazy-inmem  groupby_high             rep1 peak+   2327.7 MB (maxrss+   2327.9) result=   140.0 MB samples=461
+ 50M polars-lazy-inmem  groupby_high             rep2 peak+   2230.9 MB (maxrss+   2231.4) result=   140.0 MB samples=346
+ 50M polars-lazy-inmem  join                     rep0 peak+   7772.2 MB (maxrss+   7773.0) result=  4592.9 MB samples=1690
+ 50M polars-lazy-inmem  join                     rep1 peak+   7779.6 MB (maxrss+   7780.1) result=  4592.9 MB samples=1718
+ 50M polars-lazy-inmem  join                     rep2 peak+   7845.7 MB (maxrss+   7846.2) result=  4592.9 MB samples=1811
+ 50M polars-lazy-inmem  sort                     rep0 peak+  10613.7 MB (maxrss+  10615.0) result=  3852.8 MB samples=834
+ 50M polars-lazy-inmem  sort                     rep1 peak+  10614.4 MB (maxrss+  10614.6) result=  3852.8 MB samples=811
+ 50M polars-lazy-inmem  sort                     rep2 peak+  10615.4 MB (maxrss+  10615.4) result=  3852.8 MB samples=868
+ 50M polars-lazy-inmem  window                   rep0 peak+   3868.8 MB (maxrss+   3868.8) result=  4652.8 MB samples=1814
+ 50M polars-lazy-inmem  window                   rep1 peak+   3963.6 MB (maxrss+   3963.6) result=  4652.8 MB samples=1838
+ 50M polars-lazy-inmem  window                   rep2 peak+   3883.6 MB (maxrss+   3883.6) result=  4652.8 MB samples=1817
+ 50M polars-lazy-inmem  pipeline_parquet         rep0 peak+   2328.5 MB (maxrss+   2328.6) result=     0.0 MB samples=168
+ 50M polars-lazy-inmem  pipeline_parquet         rep1 peak+   2361.3 MB (maxrss+   2361.3) result=     0.0 MB samples=135
+ 50M polars-lazy-inmem  pipeline_parquet         rep2 peak+   2371.1 MB (maxrss+   2371.1) result=     0.0 MB samples=119
+ 50M polars-lazy-inmem  pipeline_csv             rep0 peak+   5067.5 MB (maxrss+   5067.7) result=     0.0 MB samples=2201
+ 50M polars-lazy-inmem  pipeline_csv             rep1 peak+   5132.9 MB (maxrss+   5141.9) result=     0.0 MB samples=2266
+ 50M polars-lazy-inmem  pipeline_csv             rep2 peak+   5116.5 MB (maxrss+   5116.9) result=     0.0 MB samples=2398
+== memory 50M done 02:53:00  load: { 26.08 22.03 15.79 }
+== end 2026-10-07 02:53:00 CDT

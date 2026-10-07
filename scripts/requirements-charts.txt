@@ -1,0 +1,2 @@
+# Install alongside requirements.txt. Matplotlib also renders PNG without a browser.
+matplotlib==3.10.8

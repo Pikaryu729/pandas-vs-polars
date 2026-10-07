@@ -1,0 +1,42 @@
+{
+  "source": "summary.json",
+  "summary_sha256": "3999cbf843f3242157c311c2e46507f6cf75739e9c065af07df49e88cc0a9a93",
+  "charts": [
+    {
+      "name": "01-timings-50m",
+      "description": "Median times for all 10 workloads at 50M orders, pandas, Polars eager and Polars lazy; min\u2013max spans.",
+      "png": "01-timings-50m.png",
+      "svg": "01-timings-50m.svg"
+    },
+    {
+      "name": "02-scaling",
+      "description": "Polars lazy versus default pandas speedups at 1M, 10M and 50M orders, for every workload.",
+      "png": "02-scaling.png",
+      "svg": "02-scaling.svg"
+    },
+    {
+      "name": "03-tuned-pandas",
+      "description": "Tuned and default pandas against the faster Polars mode for CSV reading and CSV/Parquet queries at 50M orders.",
+      "png": "03-tuned-pandas.png",
+      "svg": "03-tuned-pandas.svg"
+    },
+    {
+      "name": "04-memory-50m",
+      "description": "Peak RSS growth at 50M orders for all workloads and three library modes, median of three fresh processes, excluding preloaded inputs.",
+      "png": "04-memory-50m.png",
+      "svg": "04-memory-50m.svg"
+    },
+    {
+      "name": "05-threads-10m",
+      "description": "All 10 workloads at 10M orders: pandas, Polars lazy with one thread and Polars lazy with 18 threads.",
+      "png": "05-threads-10m.png",
+      "svg": "05-threads-10m.svg"
+    },
+    {
+      "name": "06-polars-engines",
+      "description": "Polars eager, lazy in-memory and lazy streaming for six diagnostic workloads at 50M orders.",
+      "png": "06-polars-engines.png",
+      "svg": "06-polars-engines.svg"
+    }
+  ]
+}
